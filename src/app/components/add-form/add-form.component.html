@@ -1,0 +1,29 @@
+
+
+<form 
+(ngSubmit)="onSubmit()">
+    <div class="form-control mb-3">
+      <label for="text" class="form-label">Name:</label>
+      <input
+      class="form-control"
+        type="text"
+        name="name"
+        [(ngModel)]="name"
+        id="name"
+        placeholder="Enter name"
+      />
+    </div>
+    <div class="form-control mb-3">
+      <label for="day" class="form-label">Number:</label>
+      <input
+      class="form-control"
+        type="text"
+        name="number"
+        [(ngModel)]="number"
+        id="number"
+        placeholder="Enter phone-number"
+      />
+    </div>
+    <!-- <input type="submit" value="Save Contact"/> -->
+    <button type="submit" class="btn btn-primary mb-3">Save Contact</button>
+  </form>

@@ -1,0 +1,20 @@
+
+<app-add-form (onAddContact)="addContact($event)"></app-add-form>
+
+<div class="mb-5"> 
+<label for="filter" class="form-label"> </label>
+<input
+class="form-control"
+  type="search"
+  name="filter"
+  [(ngModel)]="filter"
+  id="filter"
+  placeholder="Filter contacts"
+
+/>
+</div>
+
+<h1 class="mb-5">Your Contacts:</h1>
+<h3 *ngIf="!contacts.length">Your phonebook has no entries yet. Start adding new contacts using the form above</h3>
+<app-contact *ngFor="let contact of (contacts | filterPipe:filter)" [contact]="contact" (onDeleteContact)="deleteContact($event)" >
+</app-contact>
